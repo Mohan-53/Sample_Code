@@ -44,13 +44,12 @@ setCurrentPage(page);
 
     return (
         <div>
-            <button onClick={handleViewToggle}>Toggle View</button>
             <div className="container">
             {currentPagePost.map((post) => (
                 <div key={post.id} className="card-design">
                     <h2>{post.title}</h2>
                     <p>{post.body}</p>
-                    <button onClick={() => handleRemoveCard(post.id)}>Remove</button>
+                    <button className="btn" onClick={() => handleRemoveCard(post.id)}>Remove</button>
                 </div>
             ))
             }
